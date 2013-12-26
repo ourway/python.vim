@@ -32,16 +32,43 @@ set softtabstop=4
 set autoindent
 set smarttab
 set nowrap
+set gdefault
+"set hlsearch
 set number
 syntax on
 set expandtab
 filetype indent on
 filetype on
 filetype plugin on
+set hidden
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+set nobackup
+set noswapfile
+autocmd filetype python set expandtab
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+autocmd filetype html,xml set listchars-=tab:>.
 
-set guifont=UbuntuMono\ 12
+"set guifont=UbuntuMono\ 13
+set guifont=Inconsolata-g\ 11
 
 colo slate
+colo moria
+set colorcolumn=85
+
+nnoremap ; :
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 
 if has('gui_running')
 ":set guioptions-=m  "remove menu bar
@@ -53,26 +80,34 @@ endif
 "nmap p "+p
 
 "map <F2>s#^#\##<cr>
-map <F2> :s#^#\##<cr>
-map <F3> :s#^\###<cr>
+map <F2> :s#^#\##
+map <F3> :s#^\###
 
 map <F5> :<ESC>:!python -OO -u -d %<cr>
 map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
-
-map <F8> :<ESC><c-w>c<cr>
-map <F9> :<ESC><c-w>v<cr>
-map <F10> :<ESC><c-w>s<cr>
-map <F11> :<ESC><c-w>\|<cr>
-map <F12> :<ESC><c-w>=<cr>
+set pastetoggle=<F4>
+map <F8> :<ESC><c-w>c
+map <F9> :<ESC><c-w>v
+map <F10> :<ESC><c-w>s
+map <F11> :<ESC><c-w>\|<c-w>_
+map <F12> :<ESC><c-w>=
 "map <F3>s#^\###<cr>
 "nnoremap <leader>p oimport pdb; pdb.set_trace()^[
-map <c-v> :<ESC>"+p
+map <c-v> :<ESC><F4>"+p
 map <c-s> :<ESC>:wa<cr>
+let g:pep8_map='F7' 
+
+execute pathogen#infect()
+let g:syntastic_python_checkers=['pyflakes']
+
+nnoremap / /\v
+vnoremap / /\v
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 
 
-
-
-
-
+au FocusLost * :wa
 
 
