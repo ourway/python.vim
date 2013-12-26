@@ -13,6 +13,7 @@ set encoding=utf8
 "set paste
 set textwidth=0
 set backspace=indent,eol,start
+set cindent
 set incsearch
 set ignorecase
 set ruler
