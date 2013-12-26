@@ -66,3 +66,8 @@ map <F10> :<ESC><c-w>s<cr>
 map <F11> :<ESC><c-w>\|<cr>
 map <F12> :<ESC><c-w>=<cr>
 map <F8> :<ESC><c-w>c<cr>
+
+
+map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
+
+
