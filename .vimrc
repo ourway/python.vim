@@ -55,19 +55,23 @@ endif
 map <F2> :s#^#\##<cr>
 map <F3> :s#^\###<cr>
 
-map <F5> :<ESC>:!python %<cr>
+map <F5> :<ESC>:!python -OO -u -d %<cr>
+map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
+
+map <F8> :<ESC><c-w>c<cr>
+map <F9> :<ESC><c-w>v<cr>
+map <F10> :<ESC><c-w>s<cr>
+map <F11> :<ESC><c-w>\|<cr>
+map <F12> :<ESC><c-w>=<cr>
 "map <F3>s#^\###<cr>
 "nnoremap <leader>p oimport pdb; pdb.set_trace()^[
 map <c-v> :<ESC>"+p
 map <c-s> :<ESC>:wa<cr>
 
-map <F9> :<ESC><c-w>v<cr>
-map <F10> :<ESC><c-w>s<cr>
-map <F11> :<ESC><c-w>\|<cr>
-map <F12> :<ESC><c-w>=<cr>
-map <F8> :<ESC><c-w>c<cr>
 
 
-map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
+
+
+
 
 
