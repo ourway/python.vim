@@ -31,7 +31,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smarttab
-set nowrap
+"set nowrap
 set gdefault
 "set hlsearch
 set number
@@ -48,7 +48,7 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 set nobackup
-set noswapfile
+"set noswapfile
 autocmd filetype python set expandtab
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
@@ -59,7 +59,7 @@ set guifont=Inconsolata-g\ 11
 
 colo slate
 colo moria
-set colorcolumn=85
+"set colorcolumn=85
 
 nnoremap ; :
 
@@ -83,7 +83,7 @@ endif
 map <F2> :s#^#\##
 map <F3> :s#^\###
 
-map <F5> :<ESC>:!python -OO -u -d %<cr>
+map <F5> :<ESC>:!asapy -OO -u -d %<cr>
 map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
 set pastetoggle=<F4>
 map <F8> :<ESC><c-w>c
