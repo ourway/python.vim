@@ -8,7 +8,7 @@ set hidden             " Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
 
 
-
+set autochdir
 set encoding=utf8
 "set paste
 set textwidth=0
@@ -50,14 +50,12 @@ set noerrorbells         " don't beep
 set nobackup
 "set noswapfile
 autocmd filetype python set expandtab
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
 set guifont=Inconsolata-g\ 11
 
-colo slate
+colo desert
 colo moria
 "set colorcolumn=85
 
@@ -80,10 +78,10 @@ endif
 "nmap p "+p
 
 "map <F2>s#^#\##<cr>
-map <F2> :s#^#\##
-map <F3> :s#^\###
+map <F2> :s#^#\##<cr>
+map <F3> :s#^\###<cr>
 
-map <F5> :<ESC>:!asapy -OO -u -d %<cr>
+map <F5> :<ESC>:!make<cr>
 map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
 set pastetoggle=<F4>
 map <F8> :<ESC><c-w>c
@@ -100,8 +98,8 @@ let g:pep8_map='F7'
 execute pathogen#infect()
 let g:syntastic_python_checkers=['pyflakes']
 
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
