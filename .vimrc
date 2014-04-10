@@ -12,7 +12,7 @@ set autochdir
 set encoding=utf8
 "set paste
 set textwidth=0
-set backspace=indent,eol,start
+set backspace=indent,start
 set cindent
 set incsearch
 set ignorecase
@@ -53,7 +53,7 @@ autocmd filetype python set expandtab
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
-set guifont=Inconsolata-g\ 11
+set guifont=Inconsolata-g\ 13
 
 colo desert
 colo moria
