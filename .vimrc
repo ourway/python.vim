@@ -53,10 +53,10 @@ autocmd filetype python set expandtab
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
-set guifont=Inconsolata-g\ 13
+set guifont=monaco\ 13
 
-colo desert
-colo moria
+colo molokai
+"colo github
 "set colorcolumn=85
 
 nnoremap ; :
