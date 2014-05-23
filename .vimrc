@@ -53,7 +53,7 @@ autocmd filetype python set expandtab
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
-set guifont=monaco\ 13
+set guifont=monaco\ 12
 
 colo molokai
 "colo github
