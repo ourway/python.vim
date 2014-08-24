@@ -12,7 +12,7 @@ set autochdir
 set encoding=utf8
 "set paste
 set textwidth=0
-set backspace=indent,start
+set backspace=indent,eol,start
 set cindent
 set incsearch
 set ignorecase
@@ -43,7 +43,7 @@ filetype plugin on
 set hidden
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.pyo
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
@@ -53,7 +53,7 @@ autocmd filetype python set expandtab
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
-set guifont=monaco\ 12
+set guifont=monaco\ 9
 
 colo molokai
 "colo github
@@ -68,11 +68,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 
-if has('gui_running')
+"if has('gui_running')
 ":set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
+":set guioptions-=T  "remove toolbar
 ":set guioptions-=r  "remove right-hand scroll bar
-endif
+"endif
 
 " Paste
 "nmap p "+p
@@ -81,7 +81,7 @@ endif
 map <F2> :s#^#\##<cr>
 map <F3> :s#^\###<cr>
 
-map <F5> :<ESC>:!make<cr>
+map <F5> :<ESC>:!python %<cr>
 map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
 set pastetoggle=<F4>
 map <F8> :<ESC><c-w>c
@@ -108,4 +108,7 @@ vnoremap <F1> <ESC>
 
 au FocusLost * :wa
 
+"update every 1 sec
+"set updatetime=1000
+autocmd CursorHoldI * silent w
 
