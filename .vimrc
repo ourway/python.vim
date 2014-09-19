@@ -9,6 +9,7 @@ set mouse=a		" Enable mouse usage (all modes)
 
 
 set autochdir
+set nowrap
 set encoding=utf8
 "set paste
 set textwidth=0
