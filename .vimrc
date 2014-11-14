@@ -54,11 +54,14 @@ autocmd filetype python set expandtab
 autocmd filetype html,xml set listchars-=tab:>.
 
 "set guifont=UbuntuMono\ 13
-set guifont=monaco\ 11
+set guifont=monaco\ 10
 
 colo molokai
 "colo github
 "set colorcolumn=85
+augroup filetypedetect
+au BufNewFile,BufRead *.tjp,*.tji               setf tjp
+augroup END
 
 nnoremap ; :
 
@@ -82,7 +85,7 @@ map <C-l> <C-w>l
 map <F2> :s#^#\##<cr>
 map <F3> :s#^\###<cr>
 
-map <F5> :<ESC>:!python %<cr>
+map <F5> :<ESC>:!./%<cr>
 map <F6> :<ESC>oimport pdb; pdb.set_trace()<ESC>
 set pastetoggle=<F4>
 map <F8> :<ESC><c-w>c
