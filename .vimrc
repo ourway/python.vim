@@ -9,7 +9,7 @@ set mouse=a		" Enable mouse usage (all modes)
 
 
 set autochdir
-set nowrap
+"set nowrap
 set encoding=utf8
 "set paste
 set textwidth=0
@@ -32,7 +32,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smarttab
-set nowrap
+"set nowrap
 set gdefault
 "set hlsearch
 set number
