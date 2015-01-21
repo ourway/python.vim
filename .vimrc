@@ -32,7 +32,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smarttab
-"set nowrap
+set nowrap
 set gdefault
 "set hlsearch
 set number
