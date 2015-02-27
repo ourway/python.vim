@@ -32,6 +32,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smarttab
+let python_highlight_all = 1
 "set nowrap
 set gdefault
 "set hlsearch
