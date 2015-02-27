@@ -20,7 +20,8 @@ set ignorecase
 set ruler
 set wildmenu
 set commentstring=\ #\ %s
-set foldlevel=0
+set foldlevel=2
+set nofoldenable    " disable folding
 set clipboard+=unnamed
 set nobackup
 set nowritebackup
