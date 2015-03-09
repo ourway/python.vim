@@ -8,6 +8,7 @@ cd python.vim
 mv ~/.vim ~/.vim.bk
 mv ~/.vimrc ~/.vimrc.bk
 ln -s $PWD/.vim ~/.vim
+ln -s $PWD/.fonts ~/.fonts
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 

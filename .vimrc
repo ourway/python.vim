@@ -151,7 +151,7 @@ endif
 
 
 "set guifont=UbuntuMono\ 13
-set guifont=monaco\ 12
+set guifont=monaco\ 11
 
 colo jellybeans
 
